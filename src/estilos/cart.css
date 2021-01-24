@@ -1,0 +1,120 @@
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.itemListBackground{
+    background-color: #ebebeb;
+    padding: 50px 0px;
+}
+.itemListContainer{
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.elements{
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+}
+.tabs{
+    color: #3483fa;
+    list-style: none;
+    padding: 50px 50px 0 50px;
+}
+.tabs:hover{
+    text-decoration: none;
+}
+
+.tabs::selection{
+    border-bottom: 1px solid #000;
+}
+.line{
+    max-width: 0px;
+    margin: auto;
+}
+.tituloItemList{
+    text-align: center;
+    font-size: 32px;
+    font-weight: inherit;
+    color: #666;
+    padding-top: 60px;
+}
+
+.subTituloItemList{
+    text-align: center;
+    font-size: 18px;
+    font-weight: inherit;
+    color: #666;
+    line-height: 1.45;
+    padding-bottom: 100px;
+}
+.mensajeNombre{
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.mensajeCaracteristicas{
+    font-size: 14px;
+    color: rgba(0,0,0,.45);
+    font-weight: 400;
+}
+.mensajeModificar:hover{
+    text-decoration: none;
+}
+.imagenProducto{
+    width:48px;
+    height:48px;
+    margin: 20px;
+}
+.item{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+}
+.listProducto{
+    display: flex;
+    list-style: none;
+}
+.product__container{
+    margin: 20px;
+}
+.cantidadProductos{
+    width: 50px;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+.cantidadProductos__container{
+    margin-top: 20px;
+    width: 100%;
+    display: flexbox;
+    justify-content: flex-end;
+}
+.cantidadProductosDisponibles{
+    font-weight: 300;
+    font-size: 14px;
+    color: #999;
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.buttonCompra{
+    height: 40px;
+}
+.containerPrecio{
+    width: 25%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end
+}
+.mensajeEnvio{
+    color: #00a650;
+}
+.listProducto{
+    max-width: 1000px;
+    padding-left: 110px;
+}
+.optionsItem{
+    padding: 0px 10px;
+}

@@ -1,0 +1,14 @@
+.compraItem{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.agregarCompra__carro{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.botonCompra{
+    display: flex;
+    justify-content: center;
+}

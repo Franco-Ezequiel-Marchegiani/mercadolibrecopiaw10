@@ -1,0 +1,92 @@
+/* 
+Color navbar amarillo: #fff159 
+Color fondo gris: #ebebeb
+Color verde success: #00a650*/
+html{
+    width: 100%;
+}
+
+.header{
+    
+    background-color: #fff159;
+}
+header{
+    background-color: #fff159;
+    width: 100%;
+}
+input{
+    width: 600px;
+    height: 39px;
+    margin-top: 5px;
+    margin-left: 50px;
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    padding: 7px 60px 9px 15px;
+    border-radius: 2px;
+    border: 0 rgba(0,0,0,.2);
+}
+input:focus{
+    border: none;
+}
+.button__header{
+    padding: 19px, 0, 10px, 20px;
+}
+.nav-header{
+    max-width: 1600px;
+    margin: auto;
+    background-color: #fff159;
+}
+.nav-menu{
+    font-size: 14px;
+    max-width: 1600px;
+    margin: auto;
+    align-items: center;
+    background-color: #fff159;
+    padding-left: 75px;
+}
+.compraAhora{
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 7px;
+}
+.compraAhora:a{
+    color:rgb(255, 255, 255);
+}
+.logo{
+    width: 134px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.buscador{
+    margin-top: 10px;
+}
+.navBar__usuario{
+    display: flex;
+    padding-left: 250px;
+}
+.tituloUltimaCompra{
+    max-width: 1520px;
+    margin: auto;
+    display: flex;
+    color: #666;
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 300;
+}
+.sectionHeaderItemCount{
+    max-width: 1600px;
+    margin: auto;
+    padding: 20px 0 0 0;
+}
+.linkUltimaCompra{
+    font-size: 16px;
+    padding: 9px 0px 0px 10px;
+}
+
+.buttonCard{
+    margin: 5px;
+}
+
+.items{
+    padding:50px;
+}

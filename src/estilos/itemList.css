@@ -1,0 +1,12 @@
+.sectionHeaderItemCount{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}
+.divContainerCompras{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}

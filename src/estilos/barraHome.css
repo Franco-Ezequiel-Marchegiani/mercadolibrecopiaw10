@@ -1,0 +1,103 @@
+.metodoPago{
+    width: 100%;
+    background-color: #ebebeb;  
+    padding-top: 40px;
+}
+.barraHome{
+    max-width: 1600px;
+    margin: auto;
+}
+.divContainer{
+    display: flex;
+    background-color: #fff;
+    border-radius: 2px;
+    width: 70%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+.creditCard{
+    display: grid;
+    grid-template-areas: 
+    "img texto"
+    "img link";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+}
+.imagenCreditCard{
+    grid-area: img;
+    padding-right: 50px;
+}
+.textoCreditCard{
+    grid-area: texto;
+}
+.linkCreditCard{
+    grid-area:link;
+    font-size: 14px;
+}
+
+.debitCard{
+    display: grid;
+    grid-template-areas: 
+    "img texto"
+    "img link";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+}
+.imagenDebitCard{
+    grid-area: img;
+    padding-right: 50px;
+}
+.textoDebitCard{
+    grid-area: texto;
+}
+.linkDebitCard{
+    grid-area:link;
+    font-size: 14px;
+}
+
+.efective{
+    display: grid;
+    grid-template-areas: 
+    "img texto"
+    "img link";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+}
+.imagenEfective{
+    grid-area: img;
+    padding-right: 50px;
+}
+.textoEfective{
+    grid-area: texto;
+}
+.linkEfective{
+    grid-area:link;
+    font-size: 14px;
+}
+
+.moreOptions{
+    display: grid;
+    grid-template-areas: 
+    "img texto"
+    "img link";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+}
+.imagenMoreOptions{
+    grid-area: img;
+    padding-right: 50px;
+}
+.textoMoreOptions{
+    grid-area: texto;
+}
+.linkMoreOptions{
+    grid-area:link;
+    font-size: 14px;
+}
