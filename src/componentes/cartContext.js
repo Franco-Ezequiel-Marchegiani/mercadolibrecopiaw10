@@ -35,6 +35,7 @@ function CartProvider( {children} ){
             const cartProductoNuevo = [...cartSinProductoViejo,nuevoProducto]
             setCart(cartProductoNuevo)
         } else {
+            /* Al lanzarlo menciona de que no puede encontrar el id, pero no puede encontrar ningún parámetro (nombre, producto,etc.) */
             const nuevoItem = { id: producto.id, nombre: producto.nombre, precio: producto.precio, imagen: producto.imagen, description: producto.description, stock: producto.stock, cantida: contador}
             setCart([...cart, nuevoItem])
         }
