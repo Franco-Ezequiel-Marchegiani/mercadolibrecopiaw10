@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import '../estilos/itemDetail.css';
-import {Card, Button, ListGroup} from 'react-bootstrap';
+import {Card, ListGroup} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './itemCount';
-import { Link } from 'react-router-dom';
 function ItemDetail({nombre, precio, imagen, id,description, stock, initial, item}){
     const [contador, setContador] = useState(initial)
     

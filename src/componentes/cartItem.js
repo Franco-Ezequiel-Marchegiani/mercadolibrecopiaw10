@@ -3,11 +3,13 @@ import {Button} from 'react-bootstrap';
 import "../estilos/cart.css";
 import { CartContext } from './cartContext';
 import { Link } from 'react-router-dom';
+import Cart from './cart';
 
-function CartItem(id, title, price, image, cantida, description){
+function CartItem({id, title, price, image, cantida, description}){
     const { eliminarDelCarrito } = useContext(CartContext)
+    console.log(Cart)
     return(
-        <>
+        <div>
             <article className="item">
                 <img src={image} alt={image} className="imagenProducto"/>
                     <div className="product__container">
@@ -25,12 +27,12 @@ function CartItem(id, title, price, image, cantida, description){
                     </div>
             </article>
             <ul className="listProducto">
-                <li><Button onClick={ () => eliminarDelCarrito(id)}>X</Button></li>
+                <li><Button onClick={eliminarDelCarrito(id)}>X</Button></li>
                 <li><a href="#" className="optionsItem">Más productos del vendedor</a></li>
                 <li><a href="#" className="optionsItem">Comprar ahora</a></li>
                 <li><a href="#" className="optionsItem">Guardar para después</a></li>
             </ul>
-        </>
+        </div>
     )
 }
 export default CartItem

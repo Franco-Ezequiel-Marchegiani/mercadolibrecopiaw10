@@ -7,7 +7,6 @@ import CartItem from './cartItem';
 
 function Cart(){
     const {cart, limpiarCarrito, total} = useContext(CartContext)
-
     return(
         
         <section className="itemListBackground">
@@ -18,28 +17,34 @@ function Cart(){
             </ul>
             <hr className="line"/>
             {cart.length > 0 ?(
+            <>
                 <div>
                     <p>Te falto comprar algo?</p>
                     <Link to={"/"}>
                         <Button onClick={limpiarCarrito}>¡Revisa nuestro catálogo para ver productos y ofertas increíbles!
                         </Button>
                     </Link>
-                    </div>) 
+                </div>
+            </>) 
             : 
             ( 
+            <>    
             <div>
                 <h3 className="tituloItemList">Tu carrito está vacío</h3>
                 <h4 className="subTituloItemList">¿No sabes qué comprar? <Link to={"/"}>¡Miles de productos te esperan!</Link></h4>
             </div>
+            </>
             )}
             <div className="item-cart">
-            <article className="item">
-                {cart.length >0 && cart.map( producto => <CartItem key={producto.id} id={producto.id}  title={producto.title} image={producto.image} price={producto.price} cantida={producto.cantida} description={producto.description}/>)}
-            </article>
-            
+                <article className="item">
+                    {cart.length >0 && cart.map( producto => <CartItem key={producto.id}
+                    id={producto.id}  title={producto.title} image={producto.image} price={producto.price}
+                    cantida={producto.cantida} description={producto.description}/>)}
+                </article>
             </div>
             {cart.length >0 &&
             <>
+            
             <h2 className="totalAPagar">${total}</h2>
             <div className="botons__container">
                 <Button onClick={limpiarCarrito}>

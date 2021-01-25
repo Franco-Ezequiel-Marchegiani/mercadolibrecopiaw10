@@ -12,7 +12,7 @@ function CartWidget(){
             { cantidad > 0 &&
             <> 
             <FontAwesomeIcon icon={faShoppingCart}/>
-            <h4>{cantidad}</h4>
+            <p>{cantidad}</p>
             </>}  
         </>
     )

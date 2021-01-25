@@ -27,6 +27,7 @@ function CartProvider( {children} ){
     }
 
     function aniadirCarrito(producto, contador, id){
+        console.log(producto)
         if(estaEnCart(id)){
             const viejoProducto = cart.find(p => p.id === id)
             const nuevaCantidad = viejoProducto.cantida + contador

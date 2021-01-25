@@ -10,6 +10,7 @@ function ItemCount({item, id, add, quitar, contador, stock}){
     const {aniadirCarrito} = useContext(CartContext)
 
     function aniadirYAbrir(item, contador, id){
+        console.log(item)
         aniadirCarrito(item, contador, id)
         setAbrirCarrito(true)
     }
@@ -22,7 +23,7 @@ function ItemCount({item, id, add, quitar, contador, stock}){
             </Card.Body>
             {!abrirCarrito ? (
             <div className="agregarCompra__carro">
-            <Button onClick={ () => aniadirYAbrir(item, contador, id)}>
+            <Button onClick={ aniadirYAbrir}>
             Agregar al carrito
             </Button>
             </div>) 

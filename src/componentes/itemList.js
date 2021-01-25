@@ -26,11 +26,11 @@ function ItemList({productos}){
                     </h1>                      
             </div>
                 <div className="divContainerCompras">
-                {productos && productos.map( product => <Item 
-                id={product.id}
-                title={product.title}
-                price={product.price}
-                image={product.image} />)
+                {productos && productos.map( producto => <Item 
+                id={producto.id}
+                title={producto.title}
+                price={producto.price}
+                image={producto.image} />)
                 }
                 </div>    
         </section>

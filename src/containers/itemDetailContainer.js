@@ -42,7 +42,7 @@ function ItemDetailContainer(){
     useEffect(() => {
         const promesa = new Promise((resolver, reject) =>{
             setTimeout(function(){
-                const filtroProductos = apiProductos.find(product => product.id == id)
+                const filtroProductos = apiProductos.find(producto => producto.id == id)
                 console.log(filtroProductos)
                 resolver(filtroProductos);
             }, 2000);
