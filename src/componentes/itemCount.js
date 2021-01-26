@@ -9,7 +9,7 @@ function ItemCount({item, id, add, quitar, contador, stock}){
     const [abrirCarrito, setAbrirCarrito] = useState(false)
     const {aniadirCarrito} = useContext(CartContext)
 
-    function aniadirYAbrir(item, contador, id){
+    function aniadirYAbrir(){
         console.log(item)
         aniadirCarrito(item, contador, id)
         setAbrirCarrito(true)

@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import ImagenCelu from '../imagenes/samsung-galaxy-a10.jpg';
 import ImagenMemoria from '../imagenes/memoria-ram-8gb.jpg';
 import ImagenLampara from '../imagenes/lampara-200w.jpg';
+import Item from '../componentes/item';
 
 const apiProductos = [{
     id: 1,
@@ -61,9 +62,11 @@ function ItemDetailContainer(){
             description={item.description}
             stock={item.stock}
             initial={item.initial}
+            item={item}
             /> : <h2>Loading...</h2> }
         </div>
     )
 }
 
 export default ItemDetailContainer;
+

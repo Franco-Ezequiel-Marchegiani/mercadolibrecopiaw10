@@ -7,6 +7,7 @@ import CartItem from './cartItem';
 
 function Cart(){
     const {cart, limpiarCarrito, total} = useContext(CartContext)
+    console.log(cart)
     return(
         
         <section className="itemListBackground">
@@ -33,6 +34,7 @@ function Cart(){
                 <h3 className="tituloItemList">Tu carrito está vacío</h3>
                 <h4 className="subTituloItemList">¿No sabes qué comprar? <Link to={"/"}>¡Miles de productos te esperan!</Link></h4>
             </div>
+            
             </>
             )}
             <div className="item-cart">
@@ -42,6 +44,7 @@ function Cart(){
                     cantida={producto.cantida} description={producto.description}/>)}
                 </article>
             </div>
+            
             {cart.length >0 &&
             <>
             
