@@ -3,7 +3,7 @@ import '../estilos/itemDetail.css';
 import {Card, ListGroup} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './itemCount';
-function ItemDetail({nombre, precio, imagen, id,description, stock, initial, item}){
+function ItemDetail({title, precio, imagen, id,description, stock, initial, item}){
     const [contador, setContador] = useState(initial)
     
     function add(){
@@ -21,7 +21,7 @@ function ItemDetail({nombre, precio, imagen, id,description, stock, initial, ite
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={imagen} />
                 <Card.Body>
-                    <Card.Title>{nombre}</Card.Title>
+                    <Card.Title>{title}</Card.Title>
                     <Card.Text>{description}</Card.Text>
                     <ListGroup variant="flush">
                         <ListGroup.Item>Precio: ${precio}</ListGroup.Item>

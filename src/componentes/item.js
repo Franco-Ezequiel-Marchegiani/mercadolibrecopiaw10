@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../style.css"
 import "../estilos/itemListContainer.css"
 import { Link } from 'react-router-dom';
-function Item({title, price, image, id}){
+function Item({title, price, imagen, id}){
 
     return(
         <div className="items">
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={image} className="imagenProducto" alt="imagen Producto" />
+                <Card.Img variant="top" src={imagen} className="imagenProducto" alt="imagen Producto" />
                     <Card.Body>
                         <Card.Text className="precioProducto">{price}</Card.Text>
                         <Card.Text className="nombreProducto">

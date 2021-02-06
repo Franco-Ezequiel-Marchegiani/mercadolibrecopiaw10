@@ -22,8 +22,7 @@ function Cart(){
                 <div>
                     <p>Te falto comprar algo?</p>
                     <Link to={"/"}>
-                        <Button onClick={limpiarCarrito}>¡Revisa nuestro catálogo para ver productos y ofertas increíbles!
-                        </Button>
+                        ¡Revisa nuestro catálogo para ver productos y ofertas increíbles!
                     </Link>
                 </div>
             </>) 
@@ -40,7 +39,7 @@ function Cart(){
             <div className="item-cart">
                 <article className="item">
                     {cart.length >0 && cart.map( producto => <CartItem key={producto.id}
-                    id={producto.id}  title={producto.title} image={producto.image} price={producto.price}
+                    id={producto.id}  title={producto.title} imagen={producto.imagen} precio={producto.precio}
                     cantida={producto.cantida} description={producto.description}/>)}
                 </article>
             </div>

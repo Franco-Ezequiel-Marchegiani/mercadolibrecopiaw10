@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Item from './item';
 import { useParams } from 'react-router-dom';
 import '../estilos/itemList.css';
+import firebase from '../firebase';
 
 function ItemList({productos}){
     const [ items, setItems ] = useState([])
@@ -11,8 +12,17 @@ function ItemList({productos}){
 
     useEffect(() => {
         if(id){
-            const category = productos.filter(producto => producto.categoryId == id)
-            setItems(category)
+            const db = firebase
+            const collection = db.collection('productos')
+            const query = collection.where('categoryId',"==",id).get()
+            query
+            .then((result) => {
+                setItems(result.docs.map(p => ({id: p.id, ...p.data()})))
+              })
+              .catch((error) => {
+                console.log(error)
+              })
+            
         }
         else(
             setItems(productos)
@@ -29,8 +39,8 @@ function ItemList({productos}){
                 {productos && productos.map( producto => <Item 
                 id={producto.id}
                 title={producto.title}
-                price={producto.price}
-                image={producto.image} />)
+                precio={producto.precio}
+                imagen={producto.imagen} />)
                 }
                 </div>    
         </section>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from "./componentes/navbar";
 import Carusel from './componentes/carusel';
 import BarraHome from "./componentes/barraHome";
@@ -9,6 +9,8 @@ import CartWidget from './componentes/cartWidget';
 import CartProvider from './componentes/cartContext';
 import Cart from './componentes/cart';
 const App = function(){
+
+
     return(
         <>
         <CartProvider>
@@ -18,7 +20,7 @@ const App = function(){
                         <Route exact path="/">
                             <Carusel/>
                             <BarraHome/>
-                            <ListContainer />
+                            <ListContainer/>
                         </Route>
                         <Route exact path="/category/:id">
                             <ListContainer/>

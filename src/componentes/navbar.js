@@ -27,10 +27,9 @@ function NavBar(){
                     <Nav className="mr-auto">        
                         <Nav.Link href="#home"><FontAwesomeIcon icon={faMapMarkerAlt}/><span> Envios a</span><span> Capital Federal</span> </Nav.Link>           
                         <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Vehículos</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Inmuebles</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Tecnología</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Hogar y Electrodomésticos</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Celulares</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Computación</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Electrodomésticos</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.5">Herramientas e Industrias</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.6">Juguetes y Bebés</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.7">Deportes y Aire Libre</NavDropdown.Item>
@@ -38,12 +37,7 @@ function NavBar(){
                             <NavDropdown.Item href="#action/3.9">Accesorios para Vehículos</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.10">Moda</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.11">Belleza y Cuidado Personal</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.12">Supermercado</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.11">Agro</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.12">Servicios</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.11">Productos Sustentables</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.12">Ver más categorías</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.11">Productos dietéticos</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#home">Ofertas</Nav.Link>
                         <Nav.Link href="#link">Historial</Nav.Link>
