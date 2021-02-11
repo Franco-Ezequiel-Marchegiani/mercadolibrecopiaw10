@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import '../estilos/itemList.css';
 import firebase from '../firebase';
 
-function ItemList({productos}){
+function ItemList({ref}){
     const [ items, setItems ] = useState([])
 
     const { id } = useParams()
@@ -25,9 +25,9 @@ function ItemList({productos}){
             
         }
         else(
-            setItems(productos)
+            setItems(ref)
         )
-    }, [id, productos]);
+    }, [id, ref]);
     
     return(
         <section className="sectionItemCount">
@@ -36,11 +36,11 @@ function ItemList({productos}){
                     </h1>                      
             </div>
                 <div className="divContainerCompras">
-                {productos && productos.map( producto => <Item 
-                id={producto.id}
-                title={producto.title}
-                precio={producto.precio}
-                imagen={producto.imagen} />)
+                {ref && ref.map( refs => <Item 
+                id={refs.id}
+                title={refs.title}
+                precio={refs.precio}
+                imagen={refs.imagen} />)
                 }
                 </div>    
         </section>
