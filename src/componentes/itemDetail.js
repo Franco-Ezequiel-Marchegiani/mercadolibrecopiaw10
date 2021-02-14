@@ -3,7 +3,7 @@ import '../estilos/itemDetail.css';
 import {Card, ListGroup} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './itemCount';
-function ItemDetail({title, precio, imagen, id,description, stock, initial, item}){
+function ItemDetail({title, precio, imagen, id,description, stock, initial, fireItem}){
     const [contador, setContador] = useState(initial)
     
     function add(){
@@ -28,7 +28,7 @@ function ItemDetail({title, precio, imagen, id,description, stock, initial, item
                         <ListGroup.Item>Stock disponible: {stock}</ListGroup.Item>
                     </ListGroup>                  
                     <div className="botonesCompra">
-                        <ItemCount stock={stock} add={add} quitar={quitar} contador={contador} id={id} item={item}/>
+                        <ItemCount stock={stock} add={add} quitar={quitar} contador={contador} id={id} item={fireItem}/>
                     </div>
                 </Card.Body>
             </Card>

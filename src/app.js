@@ -8,8 +8,23 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import CartWidget from './componentes/cartWidget';
 import CartProvider from './componentes/cartContext';
 import Cart from './componentes/cart';
+import {firestore} from './firebase';
 const App = function(){
 
+    const [fireProductos, setFireProductos] = useState([])
+
+    useEffect(() =>{
+        
+        const db = firestore
+        const collection = db.collection("productos");
+        const query = collection.get()
+
+        query.then((resultado)=>{
+            setFireProductos(resultado.docs.map(producto => ({id: producto.id, ...producto.data()})))
+        }).catch((error)=>{
+            console.log(error)
+        })
+    },[fireProductos])
 
     return(
         <>
@@ -20,10 +35,10 @@ const App = function(){
                         <Route exact path="/">
                             <Carusel/>
                             <BarraHome/>
-                            <ListContainer/>
+                            <ListContainer products={fireProductos}/>
                         </Route>
                         <Route exact path="/category/:id">
-                            <ListContainer/>
+                            <ListContainer products={fireProductos}/>
                         </Route>
                         <Route exact path="/item/:id">
                             <ItemDetailContainer/>

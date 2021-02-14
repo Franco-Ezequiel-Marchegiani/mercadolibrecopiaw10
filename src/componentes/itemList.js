@@ -3,12 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Item from './item';
 import { useParams } from 'react-router-dom';
 import '../estilos/itemList.css';
-import firebase from '../firebase';
+//import firebase from '../firebase';
 
-function ItemList({ref}){
-    const [ items, setItems ] = useState([])
+function ItemList({products}){
+    //const [ items, setItems ] = useState([])
 
-    const { id } = useParams()
+    /* const { id } = useParams()
 
     useEffect(() => {
         if(id){
@@ -25,9 +25,9 @@ function ItemList({ref}){
             
         }
         else(
-            setItems(ref)
+            setItems(productos)
         )
-    }, [id, ref]);
+    }, [id, productos]); */
     
     return(
         <section className="sectionItemCount">
@@ -36,11 +36,12 @@ function ItemList({ref}){
                     </h1>                      
             </div>
                 <div className="divContainerCompras">
-                {ref && ref.map( refs => <Item 
-                id={refs.id}
-                title={refs.title}
-                precio={refs.precio}
-                imagen={refs.imagen} />)
+                {products && products.map( product => <Item 
+                key={product.id}
+                id={product.id}
+                title={product.title}
+                precio={product.precio}
+                imagen={product.imagen} />)
                 }
                 </div>    
         </section>

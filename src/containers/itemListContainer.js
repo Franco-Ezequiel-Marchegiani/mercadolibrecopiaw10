@@ -2,50 +2,47 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import "../estilos/itemListContainer.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Imagen1 from '../imagenes/lampara-200w.jpg'
-import Imagen2 from '../imagenes/memoria-ram-8gb.jpg'
-import Imagen3 from '../imagenes/samsung.jpg'
 import ItemList from '../componentes/itemList';
-import firebase from '../firebase';
-import 'firebase/firestore';
+import {firestore} from '../firebase';
 
-function ListContainer(){
+function ListContainer({products}){
     
-    //const [items, setItems] = useState([]);
-    const [productosFirebase, setProductos] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const ref = firebase.firestore().collection("productos");
-      function getProductos(){
-         setLoading(true);
-         ref.onSnapshot((querySnapshot) =>{
-             const items = [];
-             querySnapshot.forEach((doc)=>{
-              items.push(doc.data());
-             });
-             setProductos(items);
-             setLoading(false);
-         });
-     }
-     useEffect(() => {
-         getProductos();
-     }, []); 
-     /* function getProductos(){
-         setLoading(true);
-         ref.get().then((item) =>{
-             const items = item.docs.map((doc) => doc.data());
-             setProductos(items);
-             setLoading(false);
-         });
-     }
-    
-     useEffect(() => {
-         getProductos();
-     }, []); */
-     console.log(productosFirebase)
+    //const [items, setItems] = useState([])
+    const [productosLista, setProductosLista] = useState([])
+    const { id } = useParams()
+
+
+    useEffect(() =>{
+        if(id){
+            const category = products.filter(productos => productos.categoryId === id)
+            setProductosLista(category)
+        }
+        else{
+            setProductosLista(products)
+        }
+    }, [id, products])
+
+    /* useEffect(() =>{
+        if(id){
+            const db = firestore
+            const collection = db.collection("productos");
+            const query = collection.where('categoryId', "==",id).get()
+            query.then((resultado)=>{
+                setProductosLista(resultado.docs.map(p => ({id: p.id, ...p.data()})))
+            }).catch(()=>{
+                console.log("Fallo")
+            })
+
+        }else{
+            setProductosLista(products)
+        }
+
+        
+    },[id, products]) */
+
     return(
         <section className="sectionItemCount">
-            {<ItemList ref={productosFirebase}/>   }
-            {ref.length > 0 ? <ItemList ref={productosFirebase}/> : <h2>Cargando...</h2>}
+            {products.length > 0 ? <ItemList products={productosLista}/> : <h2>Cargando...</h2>   }
         </section>
     )
 }
